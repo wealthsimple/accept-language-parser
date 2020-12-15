@@ -45,6 +45,7 @@ jobs:
           GITHUB_TOKEN="$DEVTOOLS_GITHUB_API_TOKEN" \
           NPM_TOKEN="$NEXUS_CIRCLE_CI_TOKEN" \
           yarn run semantic-release
+
 workflows:
   version: 2
   commit-workflow:
