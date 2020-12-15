@@ -31,6 +31,7 @@ jobs:
           key: v1-node-modules-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
+      - run: yarn test
       - persist_to_workspace:
           root: .
           paths: .
@@ -43,7 +44,7 @@ jobs:
       - run: |
           GITHUB_TOKEN="$DEVTOOLS_GITHUB_API_TOKEN" \
           NPM_TOKEN="$NEXUS_CIRCLE_CI_TOKEN" \
-          yarn run semantic-release -e semantic-release-monorepo-config --npm-publish
+          yarn run semantic-release
 workflows:
   version: 2
   commit-workflow:
