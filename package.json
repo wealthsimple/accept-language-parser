@@ -1,6 +1,6 @@
 {
   "name": "@wealthsimple/accept-language-parser",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Parse the accept-language header from a HTTP request",
   "main": "index.js",
   "scripts": {
